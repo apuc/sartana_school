@@ -1,0 +1,19 @@
+.contact {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #bb9b6a;
+  z-index: 100;
+  border-radius: 50%;
+  right: 48px;
+  bottom: 48px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
