@@ -15,20 +15,6 @@ return [
     'language' => 'ru',
     'name' => 'Company',
 //    'defaultRoute' => 'index',
-    'modules' => [
-        'news' => [
-            'class' => 'frontend\modules\news\Module',
-            'layout' => '@frontend/modules/admin/views/layouts/main'
-        ],
-        'admin' => [
-            'class' => 'frontend\modules\admin\Module',
-            'layout' => 'main',
-        ],
-        'docs' => [
-            'class' => 'frontend\modules\docs\Module',
-            'layout' => '@frontend/modules/admin/views/layouts/main'
-        ],
-    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
