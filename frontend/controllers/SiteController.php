@@ -16,6 +16,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use yii\web\NotFoundHttpException;
 
 /**
  * Site controller
@@ -149,10 +150,28 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionNews()
+    /**
+     * @throws NotFoundHttpException
+     */
+    public function actionNews($id)
     {
-        $news = News::find()->all();
-        return $this->render('news', compact('news'));
+        $news = \common\models\News::find()->limit(2)->all();
+        return $this->render('news-details', [
+            'item' => $this->findNewsModel($id),
+            'news' => $news,
+        ]);
+    }
+
+    /**
+     * @throws NotFoundHttpException
+     */
+    protected function findNewsModel($id)
+    {
+        if (($model = \backend\modules\news\models\News::findOne(['id' => $id])) !== null) {
+            return $model;
+        }
+
+        throw new NotFoundHttpException('The requested page does not exist.');
     }
 
     /**

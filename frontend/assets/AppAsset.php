@@ -18,6 +18,9 @@ class AppAsset extends AssetBundle
         'build/styles/fonts.css',
         'build/styles/footer.css',
         'build/styles/aside.css',
+        'build/styles/news-details.css',
+        'build/styles/basic-inf.css',
+        'build/styles/structure.css',
     ];
     public $js = [
     ];

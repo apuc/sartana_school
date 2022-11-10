@@ -2,6 +2,8 @@
 
 /** @var yii\web\View $this */
 
+use yii\helpers\Html;
+
 $this->title = Yii::$app->name;
 ?>
 
@@ -31,7 +33,7 @@ $this->title = Yii::$app->name;
                     <?=$item['short_desc']?>
                 </span>
             </div>
-            <a class="info__more">Learn more about <?=$item['name']?>.</a>
+            <?php echo Html::a('read more about' . $item['name'], array('site/news', 'id'=>$item['id']));?>
             <img class="info__img" src="./uploads/images/<?=$item['image']?>" alt="img"/>
         </section>
 

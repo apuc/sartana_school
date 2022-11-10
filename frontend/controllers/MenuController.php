@@ -14,6 +14,11 @@ class MenuController extends \yii\web\Controller
         return $this->render('structures');
     }
 
+    public function actionDocuments()
+    {
+        return $this->render('documents');
+    }
+
     public function actionEducation()
     {
         return $this->render('education');

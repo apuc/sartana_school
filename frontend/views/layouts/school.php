@@ -28,6 +28,7 @@ AppAsset::register($this);
                     <?= Html::a('Основные сведения', ['menu/base-info']);?>
                     <?= Html::a('Структура и органы управления', ['menu/structures']);?>
                     <?= Html::a('Образование', ['menu/education']);?>
+                    <?= Html::a('документы', ['menu/documents']);?>
                     <?= Html::a('Руководство. Педагогический состав', ['menu/staff']);?>
                     <?= Html::a('Материально - техническое обеспечение и оснащенность', ['menu/staff']);?>
                     <?= Html::a('Стипендии и меры поддержки', ['menu/support']);?>
@@ -39,13 +40,16 @@ AppAsset::register($this);
                     <?= Html::a('Организация питания', ['menu/feed']);?>
                 </div>
             </li>
+
             <li class="header__navigationMain__start"><a>Get in touch</a></li>
         </ul>
     </nav>
 </header>
 
 <?= $content?>
-
+<aside class="contact">
+    <img src="/media/images/contact.svg" alt="img" />
+</aside>
 <footer class="footer">
     <div class="footer__content">
         <div class="footer__awards">

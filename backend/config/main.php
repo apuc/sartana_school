@@ -11,7 +11,37 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'teachers' => [
+            'class' => 'backend\modules\teachers\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+        ],
+        'news' => [
+            'class' => 'backend\modules\news\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+        ],
+        'hot-menu' => [
+            'class' => 'backend\modules\hotMenu\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+        ],
+        'answer' => [
+            'class' => 'backend\modules\answer\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+
+        ],
+        'feedback' => [
+            'class' => 'backend\modules\feedback\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+        ],
+        'admin' => [
+            'class' => 'backend\modules\admin\Module',
+            'layout' => 'main',
+        ],
+        'docs' => [
+            'class' => 'backend\modules\docs\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+        ],
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
@@ -37,14 +67,19 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+
+        'urlManagerFrontend' => [
+            'class' => 'yii\web\urlManager',
+            'baseUrl' => '@frontend/web/uploads',
+        ],
+
     ],
     'params' => $params,
 ];
