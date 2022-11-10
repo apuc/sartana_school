@@ -12,8 +12,25 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
+        'teachers' => [
+            'class' => 'backend\modules\teachers\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+        ],
         'news' => [
             'class' => 'backend\modules\news\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+        ],
+        'hot-menu' => [
+            'class' => 'backend\modules\hotMenu\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+        ],
+        'answer' => [
+            'class' => 'backend\modules\answer\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+
+        ],
+        'feedback' => [
+            'class' => 'backend\modules\feedback\Module',
             'layout' => '@backend/modules/admin/views/layouts/main'
         ],
         'admin' => [
@@ -56,6 +73,11 @@ return [
             'showScriptName' => false,
             'rules' => [
             ],
+        ],
+
+        'urlManagerFrontend' => [
+            'class' => 'yii\web\urlManager',
+            'baseUrl' => '@frontend/web/uploads',
         ],
 
     ],

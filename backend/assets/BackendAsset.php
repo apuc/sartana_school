@@ -8,4 +8,3 @@ class BackendAsset extends AssetBundle
 {
     public $sourcePath = '@frontend/web/uploads/';
 }
-
