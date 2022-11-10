@@ -35,6 +35,7 @@ class HotMenu extends \yii\db\ActiveRecord
             ['image', 'image', 'minWidth' => 500, 'maxWidth' => 500,'minHeight' => 500, 'maxHeight' => 500, 'extensions' => 'jpg, png, jpeg'],
             [['name'], 'string', 'max' => 255],
             [['name'], 'required'],
+            [['image'], 'required'],
         ];
     }
 
