@@ -2,6 +2,9 @@
 
 namespace frontend\controllers;
 
+use common\models\Docs;
+use yii\web\NotFoundHttpException;
+
 class MenuController extends \yii\web\Controller
 {
     public function actionBaseInfo()
@@ -16,7 +19,8 @@ class MenuController extends \yii\web\Controller
 
     public function actionDocuments()
     {
-        return $this->render('documents');
+        $docs = \common\models\Docs::find()->all();
+        return $this->render('documents', compact('docs'));
     }
 
     public function actionEducation()
@@ -26,7 +30,8 @@ class MenuController extends \yii\web\Controller
 
     public function actionStaff()
     {
-        return $this->render('staff');
+        $staff = \common\models\Teachers::find()->all();
+        return $this->render('staff', compact('staff'));
     }
 
     public function actionEquipment()
@@ -66,6 +71,36 @@ class MenuController extends \yii\web\Controller
 
     public function actionFeed()
     {
-        return $this->render('feed');
+        $menu = \common\models\HotMenu::find()->all();
+        $answer = \common\models\Answers::find()->all();
+        return $this->render('feed', compact('menu', 'answer'));
     }
+
+    /**
+     * @throws NotFoundHttpException
+     * @throws \Exception
+     */
+    public function actionDocumentInstall($id) {
+        $model = $this->findModel($id);
+        $path = \Yii::getAlias('@frontend/web/uploads/documents/') ;
+        $file = $path . $model->doc;
+
+        if (file_exists($file)) {
+            return \Yii::$app->response->sendFile($file);
+        }
+        throw new \Exception('File not found');
+    }
+
+    /**
+     * @throws NotFoundHttpException
+     */
+    protected function findModel($id)
+    {
+        if (($model = Docs::findOne(['id' => $id])) !== null) {
+            return $model;
+        }
+
+        throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
 }

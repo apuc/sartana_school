@@ -42,6 +42,3 @@
         </section>
     </div>
 </main>
-<aside class="contact">
-    <img src="/media/images/contact.svg" alt="img" />
-</aside>

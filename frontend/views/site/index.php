@@ -34,7 +34,7 @@ $this->title = Yii::$app->name;
                 </span>
             </div>
             <?php echo Html::a('read more about' . $item['name'], array('site/news', 'id'=>$item['id']));?>
-            <img class="info__img" src="./uploads/images/<?=$item['image']?>" alt="img"/>
+            <img class="info__img" src="/uploads/images/<?=$item['image']?>" alt="img"/>
         </section>
 
         <?php
@@ -43,7 +43,7 @@ $this->title = Yii::$app->name;
 
     </div>
     <div class="join">
-        <div class="join__container">
+        <div class="join__container"    >
             <h3 class="join__title">Join us</h3>
             <p class="join__subtitle">Take your first steps to joining the Strathallan family.</p>
             <div class="join__links">
@@ -54,6 +54,3 @@ $this->title = Yii::$app->name;
         </div>
     </div>
 </main>
-<aside class="contact">
-    <img src="media/images/contact.svg" alt="img" />
-</aside>

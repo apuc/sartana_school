@@ -72,3 +72,5 @@ class News extends \yii\db\ActiveRecord
         $this->prettyDate = date("d-m-Y", $this->date);
     }
 }
+
+

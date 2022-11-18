@@ -32,7 +32,7 @@ class HotMenu extends \yii\db\ActiveRecord
     {
         return [
             [['dishes'], 'safe'],
-            ['image', 'image', 'minWidth' => 500, 'maxWidth' => 500,'minHeight' => 500, 'maxHeight' => 500, 'extensions' => 'jpg, png, jpeg'],
+//            ['image', 'image', 'minWidth' => 500, 'maxWidth' => 500,'minHeight' => 500, 'maxHeight' => 500, 'extensions' => 'jpg, png, jpeg'],
             [['name'], 'string', 'max' => 255],
             [['name'], 'required'],
             [['image'], 'required'],

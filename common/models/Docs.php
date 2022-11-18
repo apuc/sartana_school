@@ -12,6 +12,7 @@ use Yii;
  */
 class Docs extends \yii\db\ActiveRecord
 {
+
     /**
      * {@inheritdoc}
      */

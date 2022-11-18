@@ -18,7 +18,13 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 <header class="header" >
-    <a class="header__logo" href="/"><img src="/media/images/logo.svg" alt="logo"/></a>
+    <a class="header__logo" href="/">
+        <img src="/media/images/logo.svg" alt="logo"/>
+        <div class="header__logoText">
+            <h2>Sartana School</h2>
+            <p>Opportunites for all to excel</p>
+        </div>
+    </a>
     <nav class="header__navigation">
         <span class="header__burger"></span>
         <ul class="header__navigationMain">
@@ -40,16 +46,12 @@ AppAsset::register($this);
                     <?= Html::a('Организация питания', ['menu/feed']);?>
                 </div>
             </li>
-
-            <li class="header__navigationMain__start"><a>Get in touch</a></li>
         </ul>
     </nav>
 </header>
 
 <?= $content?>
-<aside class="contact">
-    <img src="/media/images/contact.svg" alt="img" />
-</aside>
+
 <footer class="footer">
     <div class="footer__content">
         <div class="footer__awards">
@@ -87,17 +89,6 @@ AppAsset::register($this);
                 </a>
             </div>
         </div>
-        <div class="footer__form form">
-            <form>
-                <h4>Stay up to date with the latest news.</h4>
-                <div class="form__fields">
-                    <input type="email" class="form__input" placeholder="youremail@example.com"/>
-                    <input type="text" class="form__input" placeholder="First name" />
-                    <input type="text" class="form__input" placeholder="Last name" />
-                    <button class="form__btn" type="submit">Sign Up</button>
-                </div>
-            </form>
-        </div>
         <div class="footer__nav">
             <nav class="navigation-footer">
                 <ul class="navigation-footerList">
@@ -109,15 +100,10 @@ AppAsset::register($this);
             </nav>
         </div>
         <div class="footer__social">
-            <a><img src="/media/images/facebook.svg" alt="facebook"/></a>
-            <a><img src="/media/images/facebook.svg" alt="facebook"/></a>
-            <a><img src="/media/images/facebook.svg" alt="facebook"/></a>
-            <a><img src="/media/images/facebook.svg" alt="facebook"/></a>
-            <a><img src="/media/images/facebook.svg" alt="facebook"/></a>
-            <a><img src="/media/images/facebook.svg" alt="facebook"/></a>
+            <a href="https://vk.com/club217039218" target="_blank"><img src="/media/images/vk.png" alt="vk"/></a>
         </div>
         <div class="footer__bottom">
-            <span>© 2022 Strathallan School. All rights reserved.</span>
+            <span>© 2022 Sartana School. All rights reserved.</span>
         </div>
     </div>
 </footer>
@@ -140,6 +126,7 @@ AppAsset::register($this);
     }
     document.addEventListener('click', closeByClickingOut)
 </script>
+
 <?php $this->endBody() ?>
 </body>
 </html>

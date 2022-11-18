@@ -13,9 +13,25 @@
   font-family: benton-sans, sans-serif;
 }
 .header__logo {
-  display: block;
   height: 80px;
   width: 204px;
+  position: relative;
+  display: flex;
+}
+.header__logoText {
+  display: flex;
+  position: absolute;
+  left: 37%;
+  color: #003863;
+  top: 20%;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.header__logoText h2 {
+  font-size: 20px;
+}
+.header__logoText p {
+  font-size: 12px;
 }
 .header__burger {
   display: none;

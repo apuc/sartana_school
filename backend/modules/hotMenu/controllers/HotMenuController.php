@@ -139,7 +139,9 @@ class HotMenuController extends Controller
 
         if (Yii::$app->request->isPost && $model->load(Yii::$app->request->post())) {
             $model->dishes = \yii\helpers\Json::encode($model->dishes);
-            $model->save();
+            $model->image = UploadedFile::getInstance($model, 'image');
+            $model->image->saveAs("@frontend/web/uploads/images//{$model->image->baseName}.{$model->image->extension}");
+            $model->save(false);
             $this->createDish($model, 1);
             return $this->redirect(['view', 'id' => $model->id]);
         }

@@ -77,7 +77,11 @@ class NewsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
+        if ($this->request->isPost) {
+            $model->load($this->request->post());
+            $model->image = UploadedFile::getInstance($model, 'image');
+            $model->image->saveAs("@frontend/web/uploads/images//{$model->image->baseName}.{$model->image->extension}");
+            $model->save(false);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

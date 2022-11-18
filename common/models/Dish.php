@@ -29,8 +29,8 @@ class Dish extends \yii\db\ActiveRecord
     public static function getDietLabel()
     {
         return [
-            self::DIET_DISH => 'Диетичное блюдо',
-            self::NOT_DIET_DISH => 'Не диетичное блюдо',
+            self::DIET_DISH => 'Диетическое блюдо',
+            self::NOT_DIET_DISH => 'Не диетическое блюдо',
         ];
     }
 
