@@ -12,6 +12,10 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
+        'menu' => [
+            'class' => 'backend\modules\menu\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+        ],
         'teachers' => [
             'class' => 'backend\modules\teachers\Module',
             'layout' => '@backend/modules/admin/views/layouts/main'

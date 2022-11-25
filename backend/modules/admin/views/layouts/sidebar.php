@@ -38,7 +38,22 @@
                             ['label' => 'Ответы', 'icon' => 'archive', 'url' => ['/answer/answers'],],
                             ['label' => 'Вопросы', 'icon' => 'archive', 'url' => ['/feedback/feedback'],],
                         ],
-                    ]]]);
+                    ],
+                    ['label' => 'Добавить контент', 'icon' => 'archive',
+                        'items' => [
+                            ['label' => 'Основные сведения', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'base-info')],
+                            ['label' => 'Структура и органы управления образовательной организацией', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'structures')],
+                            ['label' => 'Образование', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'education')],
+                            ['label' => 'Материально- техническое обеспечение и оснащенность образовательного процесса', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'equipment')],
+                            ['label' => 'Платные образовательные услуги', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'paid-services')],
+                            ['label' => 'Финансово-хозяйственная деятельность', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'economic-activity')],
+                            ['label' => 'Вакантные места для приема (перевода) обучающихся', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'vacancies')],
+                            ['label' => 'Стипендии и меры поддержки обучающимся (воспитанникам)', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'support')],
+                            ['label' => 'Доступная среда', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'environment')],
+                            ['label' => 'Международное сотрудничество', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'international-cooperation')],
+                        ],
+                    ]
+                ]]);
             ?>
         </nav>
         <!-- /.sidebar-menu -->

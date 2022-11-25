@@ -26,15 +26,26 @@
                 продовольственное сырье в общеобразовательную организацию;
             </dd>
             <dd>
+                <form>
+                    <input type="text" class="form__input" placeholder="Имя">
+                    <input type="email" class="form__input" placeholder="Почта">
+                    <textarea placeholder="Вопрос"></textarea>
+                    <button class="form__btn" type="submit">Отправить</button>
+                </form>
+                <div class="form__answers">
                 <h3> Ответы на вопросы</h3>
                 <?php
+                echo '<div class="form__answer">';
                 if ($answer){
                 foreach ($answer as $item) {
-                    echo 'Вопрос: ' . \common\models\Feedback::find('name')->where(['id' => $item['feedback_id']])->one()['question'] . "<br>" .
+                    echo "<p>" . 'Вопрос: ' . \common\models\Feedback::find('name')->where(['id' => $item['feedback_id']])->one()['question'] . "<p>".
                         'Ответ: ' . $item['answer'];
                 }
                 }
+                echo '</div>
+            </div>'
                 ?>
+
             </dd>
         </dl>
     </div>

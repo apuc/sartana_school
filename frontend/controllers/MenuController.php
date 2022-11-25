@@ -9,12 +9,14 @@ class MenuController extends \yii\web\Controller
 {
     public function actionBaseInfo()
     {
-        return $this->render('baseInfo');
+        $model = \common\models\Menu::find()->where(['page'=> 'base-info'])->one();
+        return $this->render('baseInfo', compact('model'));
     }
 
     public function actionStructures()
     {
-        return $this->render('structures');
+        $model = \common\models\Menu::find()->where(['page'=> 'structures'])->one();
+        return $this->render('structures', compact('model'));
     }
 
     public function actionDocuments()
@@ -25,7 +27,8 @@ class MenuController extends \yii\web\Controller
 
     public function actionEducation()
     {
-        return $this->render('education');
+        $model = \common\models\Menu::find()->where(['page'=> 'education'])->one();
+        return $this->render('education', compact('model'));
     }
 
     public function actionStaff()
@@ -36,37 +39,44 @@ class MenuController extends \yii\web\Controller
 
     public function actionEquipment()
     {
-        return $this->render('equipment');
+        $model = \common\models\Menu::find()->where(['page'=> 'equipment'])->one();
+        return $this->render('equipment', compact('model'));
     }
 
     public function actionSupport()
     {
-        return $this->render('support');
+        $model = \common\models\Menu::find()->where(['page'=> 'support'])->one();
+        return $this->render('support', compact('model'));
     }
 
     public function actionPaidServices()
     {
-        return $this->render('paidServices');
+        $model = \common\models\Menu::find()->where(['page'=> 'paid-services'])->one();
+        return $this->render('paidServices', compact('model'));
     }
 
     public function actionEconomicActivity()
     {
-        return $this->render('economicActivity');
+        $model = \common\models\Menu::find()->where(['page'=> 'economic-activity'])->one();
+        return $this->render('economicActivity', compact('model'));
     }
 
     public function actionVacancies()
     {
-        return $this->render('vacancies');
+        $model = \common\models\Menu::find()->where(['page'=> 'vacancies'])->one();
+        return $this->render('vacancies', compact('model'));
     }
 
     public function actionEnvironment()
     {
-        return $this->render('environment');
+        $model = \common\models\Menu::find()->where(['page'=> 'vacancies'])->one();
+        return $this->render('vacancies', compact('model'));
     }
 
     public function actionInternationalCooperation()
     {
-        return $this->render('environment');
+        $model = \common\models\Menu::find()->where(['page'=> 'international-cooperation'])->one();
+        return $this->render('internationalCooperation', compact('model'));
     }
 
     public function actionFeed()
