@@ -54,51 +54,51 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="footer__content">
-        <div class="footer__awards">
-            <h4>We're proud to be recognised...</h4>
-            <div class="awards">
-                <a class="award">
-                    <img src="/media/images/footerAwards.png" alt="img"/>
-                </a>
-                <a class="award">
-                    <img src="/media/images/footerAwards.png" alt="img"/>
-                </a>
-                <a class="award">
-                    <img src="/media/images/footerAwards.png" alt="img"/>
-                </a>
-                <a class="award">
-                    <img src="/media/images/footerAwards.png" alt="img"/>
-                </a>
-                <a class="award">
-                    <img src="/media/images/footerAwards.png" alt="img"/>
-                </a>
-                <a class="award">
-                    <img src="/media/images/footerAwards.png" alt="img"/>
-                </a>
-                <a class="award">
-                    <img src="/media/images/footerAwards.png" alt="img"/>
-                </a>
-                <a class="award">
-                    <img src="/media/images/footerAwards.png" alt="img"/>
-                </a>
-                <a class="award">
-                    <img src="/media/images/footerAwards.png" alt="img"/>
-                </a>
-                <a class="award">
-                    <img src="/media/images/footerAwards.png" alt="img"/>
-                </a>
-            </div>
-        </div>
-        <div class="footer__nav">
-            <nav class="navigation-footer">
-                <ul class="navigation-footerList">
-                    <li class="navigation-footerListItem"><a>Privacy policy</a></li>
-                    <li class="navigation-footerListItem"><a>Logins</a></li>
-                    <li class="navigation-footerListItem"><a>Vacancies</a></li>
-                    <li class="navigation-footerListItem"><a>Virtual Tour</a></li>
-                </ul>
-            </nav>
-        </div>
+<!--        <div class="footer__awards">-->
+<!--            <h4>We're proud to be recognised...</h4>-->
+<!--            <div class="awards">-->
+<!--                <a class="award">-->
+<!--                    <img src="/media/images/footerAwards.png" alt="img"/>-->
+<!--                </a>-->
+<!--                <a class="award">-->
+<!--                    <img src="/media/images/footerAwards.png" alt="img"/>-->
+<!--                </a>-->
+<!--                <a class="award">-->
+<!--                    <img src="/media/images/footerAwards.png" alt="img"/>-->
+<!--                </a>-->
+<!--                <a class="award">-->
+<!--                    <img src="/media/images/footerAwards.png" alt="img"/>-->
+<!--                </a>-->
+<!--                <a class="award">-->
+<!--                    <img src="/media/images/footerAwards.png" alt="img"/>-->
+<!--                </a>-->
+<!--                <a class="award">-->
+<!--                    <img src="/media/images/footerAwards.png" alt="img"/>-->
+<!--                </a>-->
+<!--                <a class="award">-->
+<!--                    <img src="/media/images/footerAwards.png" alt="img"/>-->
+<!--                </a>-->
+<!--                <a class="award">-->
+<!--                    <img src="/media/images/footerAwards.png" alt="img"/>-->
+<!--                </a>-->
+<!--                <a class="award">-->
+<!--                    <img src="/media/images/footerAwards.png" alt="img"/>-->
+<!--                </a>-->
+<!--                <a class="award">-->
+<!--                    <img src="/media/images/footerAwards.png" alt="img"/>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="footer__nav">-->
+<!--            <nav class="navigation-footer">-->
+<!--                <ul class="navigation-footerList">-->
+<!--                    <li class="navigation-footerListItem"><a>Privacy policy</a></li>-->
+<!--                    <li class="navigation-footerListItem"><a>Logins</a></li>-->
+<!--                    <li class="navigation-footerListItem"><a>Vacancies</a></li>-->
+<!--                    <li class="navigation-footerListItem"><a>Virtual Tour</a></li>-->
+<!--                </ul>-->
+<!--            </nav>-->
+<!--        </div>-->
         <div class="footer__social">
             <a href="https://vk.com/club217039218" target="_blank"><img src="/media/images/vk.png" alt="vk"/></a>
         </div>

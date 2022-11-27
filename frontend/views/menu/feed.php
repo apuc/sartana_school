@@ -4,6 +4,10 @@
             <dt class="structure__title">Организация питания в образовательной организации</dt>
             <dd>Меню ежедневного горячего питания;</dd>
             <?php
+
+            use yii\helpers\Html;
+            use yii\widgets\ActiveForm;
+
             if ($menu){
             foreach ($menu as $item) {
                 ?>
@@ -25,28 +29,26 @@
             <dd>Перечни юpидичecкиx лиц и индивидуальных предпринимателей, поставляющих (реализующих) пищевые продукты и
                 продовольственное сырье в общеобразовательную организацию;
             </dd>
-            <dd>
-                <form>
-                    <input type="text" class="form__input" placeholder="Имя">
-                    <input type="email" class="form__input" placeholder="Почта">
-                    <textarea placeholder="Вопрос"></textarea>
-                    <button class="form__btn" type="submit">Отправить</button>
-                </form>
-                <div class="form__answers">
-                <h3> Ответы на вопросы</h3>
-                <?php
-                echo '<div class="form__answer">';
-                if ($answer){
+        </dl>
+        <?php $form = ActiveForm::begin(); ?>
+        <?= $form->field($model, 'name')->textInput()->label('Имя, Фамилия'); ?>
+        <?= $form->field($model, 'email')->input('email')->label('Адрес почты'); ?>
+        <?= $form->field($model, 'question')->textarea(['rows' => 5])->label('Ваше сообщение'); ?>
+        <?= Html::submitButton('Отправить', ['class' => 'form__btn']); ?>
+        <?php ActiveForm::end(); ?>
+
+        <div class="form__answers">
+            <h3> Ответы на вопросы</h3>
+            <?php
+            echo '<div class="form__answer">';
+            if ($answer){
                 foreach ($answer as $item) {
                     echo "<p>" . 'Вопрос: ' . \common\models\Feedback::find('name')->where(['id' => $item['feedback_id']])->one()['question'] . "<p>".
                         'Ответ: ' . $item['answer'];
                 }
-                }
-                echo '</div>
+            }
+            echo '</div>
             </div>'
-                ?>
-
-            </dd>
-        </dl>
+            ?>
     </div>
 </main>

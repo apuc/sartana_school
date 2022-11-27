@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use backend\modules\feedback\models\Feedback;
 use common\models\Docs;
 use yii\web\NotFoundHttpException;
 
@@ -81,10 +82,20 @@ class MenuController extends \yii\web\Controller
 
     public function actionFeed()
     {
+        $model = new \common\models\Feedback();
         $menu = \common\models\HotMenu::find()->all();
         $answer = \common\models\Answers::find()->all();
-        return $this->render('feed', compact('menu', 'answer'));
+        if ($this->request->isPost) {
+            if ($model->load($this->request->post()) && $model->save()) {
+                return $this->redirect(['feed']);
+            }
+        } else {
+            $model->loadDefaultValues();
+        }
+        return $this->render('feed', compact('menu', 'answer', 'model'));
     }
+
+
 
     /**
      * @throws NotFoundHttpException
@@ -100,6 +111,8 @@ class MenuController extends \yii\web\Controller
         }
         throw new \Exception('File not found');
     }
+
+
 
     /**
      * @throws NotFoundHttpException
