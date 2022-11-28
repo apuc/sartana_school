@@ -20,7 +20,7 @@ $this->title = Yii::$app->name;
             <!--                we take our responsibility as a fun, supportive home-from-home very seriously.</p>-->
             <!--            <a class="intro__about">Download the Prep School Prospectus</a>-->
             <!--            <a class="intro__about">Register for our next Open Morning</a>-->
-            <h1 class="intro__title">Сартана школа</h1>
+            <h1 class="intro__title">Муниципальное бюджетное общеобразовательное учреждение "Сартанская школа имени В.С.Бойко" администрации Новоазовского района.</h1>
         </section>
 
         <?php
