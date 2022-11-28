@@ -37,7 +37,7 @@ return [
             'class' => 'backend\modules\feedback\Module',
             'layout' => '@backend/modules/admin/views/layouts/main'
         ],
-        'admin' => [
+        'secure' => [
             'class' => 'backend\modules\admin\Module',
             'layout' => 'main',
         ],

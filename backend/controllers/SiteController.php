@@ -51,7 +51,6 @@ class SiteController extends Controller
         return [
             'error' => [
                 'class' => \yii\web\ErrorAction::class,
-                'layout' => '@backend/modules/admin/views/layouts/main'
             ],
         ];
     }
@@ -63,7 +62,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->redirect('/admin');
+        return $this->redirect('/secure');
     }
 
     /**
@@ -81,7 +80,7 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect('/admin');
+            return $this->redirect('/secure');
         }
 
         $model->password = '';
