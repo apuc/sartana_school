@@ -35,7 +35,7 @@ class Module extends \yii\base\Module
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['index', 'menu/*', 'create', 'delete', 'view', 'update'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
