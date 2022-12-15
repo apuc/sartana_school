@@ -79,8 +79,11 @@ class NewsController extends Controller
 
         if ($this->request->isPost) {
             $model->load($this->request->post());
+            $model->date = strtotime($model->date);
             $model->image = UploadedFile::getInstance($model, 'image');
+            $model->image = UploadedFile::getInstance($model, 'preview');
             $model->image->saveAs("@frontend/web/uploads/images//{$model->image->baseName}.{$model->image->extension}");
+            $model->image->saveAs("@frontend/web/uploads/images//{$model->preview->baseName}.{$model->preview->extension}");
             $model->save(false);
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -96,8 +99,15 @@ class NewsController extends Controller
 
         if ($this->request->isPost) {
             $model->load(Yii::$app->request->post());
+//            echo "<pre>";
+//            print_r($model);
+//            die();
+//            echo "</pre>";
+            $model->date = strtotime($model->date);
             $model->image = UploadedFile::getInstance($model, 'image');
+            $model->preview = UploadedFile::getInstance($model, 'preview');
             $model->image->saveAs("@frontend/web/uploads/images//{$model->image->baseName}.{$model->image->extension}");
+            $model->preview->saveAs("@frontend/web/uploads/images//{$model->preview->baseName}.{$model->preview->extension}");
             $model->save(false);
             return $this->redirect(['view', 'id' => $model->id]);
         } else {

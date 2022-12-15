@@ -77,7 +77,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $news = \common\models\News::find()->all();
+        $news = \common\models\News::find()->orderBy(['date'=>SORT_DESC])->all();
         return $this->render('index', compact('news'));
     }
 

@@ -41,6 +41,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function($model) use ($frontend) {return $frontend->baseUrl . '/images/' . $model->image;},
                 'format' => ['image', ['width' => 100, 'height' => 100]],
             ],
+            [
+                'attribute' => 'preview',
+                'value' => function($model) use ($frontend) {return $frontend->baseUrl . '/images/' . $model->preview;},
+                'format' => ['image', ['width' => 100, 'height' => 100]],
+            ],
             'short_desc',
             [
                 'class' => ActionColumn::className(),

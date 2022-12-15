@@ -21,7 +21,7 @@
                 ?>
                 <div class="relatedArticles__item item">
                     <div class="item__imgContainer">
-                        <img class="item__img" src="/uploads/images/<?=$content['image']?>" alt="artImg" />
+                        <img class="item__img" src="/uploads/images/<?=$content['preview']?>" alt="artImg" />
                     </div>
                     <div class="item__date">
                         <span><?=$content['prettyDate']?></span>

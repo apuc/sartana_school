@@ -38,6 +38,24 @@ use backend\assets\BackendAsset;
         ],
 
     ]); ?>
+    <?= $form->field($model, 'preview')->fileInput()->widget(FileInput::class, [
+
+        'pluginOptions' => [
+            'showZoom' => false,
+            'initialPreview' => [
+                $model->preview != null ? Html::img($frontend->baseUrl .'/images/'. $model->preview, ['class' => 'file-preview-image']):null,
+            ],
+            'overwriteInitial' => true,
+            'showCaption' => false,
+            'showUpload' => false,
+            'showRemove' => true,
+            'showDetails' => true,
+            'browseClass' => 'btn btn-primary btn-block',
+            'browseIcon' => '<i class="fa fa-camera"></i> ',
+            'browseLabel' => 'Выберите фото',
+        ],
+
+    ]); ?>
 
     <?= $form->field($model, 'short_desc')->textInput(['maxlength' => true]) ?>
 

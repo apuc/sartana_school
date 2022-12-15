@@ -14,6 +14,7 @@ use yii\db\ActiveRecord;
  * @property string|null $text
  * @property string|null $image
  * @property string|null $short_desc
+ * @property string|null $preview
  */
 class News extends \yii\db\ActiveRecord
 {
@@ -27,18 +28,18 @@ class News extends \yii\db\ActiveRecord
         return 'news';
     }
 
-    public function behaviors()
-    {
-        return [
-            'timestamp' => [
-                'class' => 'yii\behaviors\TimestampBehavior',
-                'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['date'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE => ['date'],
-                ],
-            ],
-        ];
-    }
+//    public function behaviors()
+//    {
+//        return [
+//            'timestamp' => [
+//                'class' => 'yii\behaviors\TimestampBehavior',
+//                'attributes' => [
+//                    ActiveRecord::EVENT_BEFORE_INSERT => ['date'],
+//                    ActiveRecord::EVENT_BEFORE_UPDATE => ['date'],
+//                ],
+//            ],
+//        ];
+//    }
 
     /**
      * {@inheritdoc}
@@ -46,8 +47,8 @@ class News extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['date','text', 'image','short_desc','name'], 'required'],
-            [['text', 'image'], 'string'],
+            [['date', 'preview','text', 'image','short_desc','name'], 'required'],
+            [['text' ,'image'], 'string'],
             [['name', 'short_desc'], 'string', 'max' => 255],
         ];
     }
@@ -62,7 +63,8 @@ class News extends \yii\db\ActiveRecord
             'date' => 'Дата',
             'name' => 'Название',
             'text' => 'Текст',
-            'image' => 'Картинка',
+            'image' => 'Основная картинка',
+            'preview' => 'Превью',
             'short_desc' => 'Краткое описание',
         ];
     }

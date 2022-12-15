@@ -2,16 +2,10 @@
     <div class="container">
         <dl class="structure__list">
             <dt class="structure__title" style="font-weight: 600">О руководителе образовательной организации, в том числе:</dt>
-            <?php
-            foreach ($staff as $item) {
-                ?>
-                <dd><?=$item['full_name']?>;</dd>
-                <dd><?=$item['job_title']?>;</dd>
-                <dd>Способы обратной связи: <?=$item['phone']?>, <?=$item['email']?>;</dd>
-            <?php
-            }
-            ?>
 
+            <dd>Фамилия, имя, отчество (при наличии);</dd>
+            <dd>Наименование должности;</dd>
+            <dd>Способы обратной связи: контактные телефоны, адрес электронной почты;</dd>
 
             <dd style="font-weight: 600">О заместителях руководителя (при наличии) в том числе:</dd>
             <dd>Фамилия, имя, отчество (при наличии);</dd>
@@ -35,6 +29,17 @@
             <dd>Общий стаж работы;</dd>
             <dd>Стаж работы по специальности;</dd>
             <dd>Преподаваемые учебные предметы, курсы, дисциплины (модули).</dd>
+
+            <dd style="font-weight: 600"> Об учителях
+            <?php
+            foreach ($staff as $item) {
+                ?>
+                <dd><?=$item['full_name']?>;</dd>
+                <dd><?=$item['job_title']?>;</dd>
+                <dd>Способы обратной связи: <?=$item['phone']?>, <?=$item['email']?>;</dd>
+                <?php
+            }
+            ?>
         </dl>
     </div>
 </main>
