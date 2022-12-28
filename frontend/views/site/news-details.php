@@ -21,7 +21,17 @@
                 ?>
                 <div class="relatedArticles__item item">
                     <div class="item__imgContainer">
-                        <img class="item__img" src="/uploads/images/<?=$content['preview']?>" alt="artImg" />
+                        <?php
+                        if($item['preview']){
+                            ?>
+                            <img class="item__img" src="/uploads/images/<?=$item['preview']?>" alt="img"/>
+                            <?php
+                        }else{
+                            ?>
+                            <img class="item__img" src="/uploads/images/<?=$item['image']?>" alt="img"/>
+                            <?php
+                        }
+                        ?>
                     </div>
                     <div class="item__date">
                         <span><?=$content['prettyDate']?></span>
