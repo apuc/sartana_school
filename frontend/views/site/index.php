@@ -36,7 +36,17 @@ $this->title = Yii::$app->name;
                 </span>
             </div>
             <?php echo Html::a('read more about' . $item['name'], array('site/news', 'id'=>$item['id']));?>
-            <img class="info__img" src="/uploads/images/<?=$item['preview']?>" alt="img"/>
+            <?php
+            if($item['preview']){
+                ?>
+                <img class="info__img" src="/uploads/images/<?=$item['preview']?>" alt="img"/>
+            <?php
+            }else{
+                ?>
+                <img class="info__img" src="/uploads/images/<?=$item['image']?>" alt="img"/>
+                <?php
+            }
+            ?>
         </section>
 
         <?php
