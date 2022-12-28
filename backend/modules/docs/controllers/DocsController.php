@@ -84,6 +84,12 @@ class DocsController extends Controller
         ]);
     }
 
+    public function beforeAction($action)
+    {
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
+
 
     /**
      * @throws NotFoundHttpException
