@@ -2,15 +2,45 @@
     <div class="container">
         <dl class="structure__list">
             <dt class="structure__title" style="font-weight: 600">О руководителе образовательной организации, в том числе:</dt>
-
+            <?php
+            if ($director){
+                foreach ($director as $item) {
+                    ?>
+                    <dd>Имя <?=$item['full_name']?>;</dd>
+                    <span style="font-weight: bold;">Должность: <?=$item['job_title']?>;</span>
+                    <dd>Способы обратной связи: <?=$item['phone']?>, <?=$item['email']?>;</dd>
+                    <?php
+                }
+            }else{
+                '
+               
             <dd>Фамилия, имя, отчество (при наличии);</dd>
             <dd>Наименование должности;</dd>
-            <dd>Способы обратной связи: контактные телефоны, адрес электронной почты;</dd>
+            <dd>Способы обратной связи: контактные телефоны, адрес электронной почты;</dd> 
+                ';
+            }
+                ?>
+
 
             <dd style="font-weight: 600">О заместителях руководителя (при наличии) в том числе:</dd>
+            <?php
+            if ($headTeacher){
+                foreach ($headTeacher as $item) {
+                    ?>
+                    <dd>Имя <?=$item['full_name']?>;</dd>
+                    <span style="font-weight: bold;">Должность: <?=$item['job_title']?>;</span>
+                    <dd>Способы обратной связи: <?=$item['phone']?>, <?=$item['email']?>;</dd>
+                    <?php
+                }
+            }else{
+                '
+               
             <dd>Фамилия, имя, отчество (при наличии);</dd>
             <dd>Наименование должности;</dd>
-            <dd>Способы обратной связи: контактные телефоны, адрес электронной почты;</dd>
+            <dd>Способы обратной связи: контактные телефоны, адрес электронной почты;</dd> 
+                ';
+            }
+            ?>
             <dd  style="font-weight: 600">О руководителях филиалов, представительств образовательной организации (при наличии) в том числе:</dd>
             <dd>Фамилия, имя, отчество (при наличии);</dd>
             <dd>Наименование должности;</dd>
@@ -34,9 +64,10 @@
             <?php
             foreach ($staff as $item) {
                 ?>
-                <dd><?=$item['full_name']?>;</dd>
-                <dd><?=$item['job_title']?>;</dd>
-                <dd>Способы обратной связи: <?=$item['phone']?>, <?=$item['email']?>;</dd>
+                <dd>Имя: <?=$item['full_name']?>;</dd>
+            <b style="font-size:20px;">Должность: <?=$item['job_title']?>;</b>
+
+            <dd>Способы обратной связи: <?=$item['phone']?>, <?=$item['email']?>;</dd>
                 <?php
             }
             ?>

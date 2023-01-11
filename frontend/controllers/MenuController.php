@@ -35,7 +35,9 @@ class MenuController extends \yii\web\Controller
     public function actionStaff()
     {
         $staff = \common\models\Teachers::find()->all();
-        return $this->render('staff', compact('staff'));
+        $director = \common\models\Supervisors::find()->where(['job_title'=> 'Директор'])->all();
+        $headTeacher = \common\models\Supervisors::find()->where(['job_title'=> 'Завуч'])->all();
+        return $this->render('staff', compact('staff', 'director', 'headTeacher'));
     }
 
     public function actionEquipment()
@@ -70,8 +72,8 @@ class MenuController extends \yii\web\Controller
 
     public function actionEnvironment()
     {
-        $model = \common\models\Menu::find()->where(['page'=> 'vacancies'])->one();
-        return $this->render('vacancies', compact('model'));
+        $model = \common\models\Menu::find()->where(['page'=> 'environment'])->one();
+        return $this->render('environment', compact('model'));
     }
 
     public function actionInternationalCooperation()

@@ -41,6 +41,10 @@ return [
             'class' => 'backend\modules\admin\Module',
             'layout' => 'main',
         ],
+        'supervisors' => [
+            'class' => 'backend\modules\supervisors\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+        ],
         'docs' => [
             'class' => 'backend\modules\docs\Module',
             'layout' => '@backend/modules/admin/views/layouts/main'

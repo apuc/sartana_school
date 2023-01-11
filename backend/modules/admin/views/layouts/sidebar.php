@@ -32,6 +32,7 @@
                     ['label' => 'Новости', 'icon' => 'archive', 'url' => ['/news/news']],
                     ['label' => 'Документы', 'icon' => 'archive', 'url' => ['/docs/docs']],
                     ['label' => 'Педагогический состав', 'icon' => 'archive', 'url' => ['/teachers/teachers'],],
+                    ['label' => 'Руководство', 'icon' => 'archive', 'url' => ['/supervisors/supervisors'],],
                     ['label' => 'Питание', 'icon' => 'archive',
                         'items' => [
                             ['label' => 'Меню', 'iconType' => 'archive', 'icon' => 'archive', 'url' => ['/hot-menu/hot-menu'],],
