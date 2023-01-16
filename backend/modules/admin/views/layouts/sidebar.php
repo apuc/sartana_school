@@ -17,7 +17,7 @@
             <div class="input-group" data-widget="sidebar-search">
                 <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
-                    <button class="btn btn-sidebar">
+                    <button class="btn btn-sidebar">  
                         <i class="fas fa-search fa-fw"></i>
                     </button>
                 </div>
@@ -52,6 +52,7 @@
                             ['label' => 'Стипендии и меры поддержки обучающимся (воспитанникам)', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'support')],
                             ['label' => 'Доступная среда', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'environment')],
                             ['label' => 'Международное сотрудничество', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'international-cooperation')],
+                            ['label' => 'Внедряем ФГОС', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'fgos')],
                         ],
                     ]
                 ]]);

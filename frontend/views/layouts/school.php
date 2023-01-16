@@ -44,6 +44,7 @@ AppAsset::register($this);
                     <?= Html::a('Доступная среда', ['menu/environment']);?>
                     <?= Html::a('Международное сотрудничество', ['menu/international-cooperation']);?>
                     <?= Html::a('Организация питания', ['menu/feed']);?>
+                    <?= Html::a('Внедряем ФГОС', ['menu/fgos']);?>
                 </div>
             </li>
         </ul>
