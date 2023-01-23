@@ -46,6 +46,12 @@ class MenuController extends \yii\web\Controller
         return $this->render('equipment', compact('model'));
     }
 
+    public function actionGia()
+    {
+        $model = \common\models\Menu::find()->where(['page'=> 'gia'])->one();
+        return $this->render('gia', compact('model'));
+    }
+
     public function actionFgos()
     {
         $model = \common\models\Menu::find()->where(['page'=> 'fgos'])->one();

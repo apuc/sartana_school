@@ -53,6 +53,7 @@
                             ['label' => 'Доступная среда', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'environment')],
                             ['label' => 'Международное сотрудничество', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'international-cooperation')],
                             ['label' => 'Внедряем ФГОС', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'fgos')],
+                            ['label' => 'Государственная итоговая аттестация (ГИА) - 2023', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'gia')],
                         ],
                     ]
                 ]]);

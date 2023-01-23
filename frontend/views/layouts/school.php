@@ -19,8 +19,8 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <header class="header" >
     <a class="header__logo" href="/">
-        <img src="/media/images/logo.svg" alt="logo"/>
-        <div class="header__logoText">
+        <img src="/media/images/school-logo.jpg" alt="logo"/>
+        <div style="margin-left: 100px;" class="header__logoText">
             <h2>Sartana School</h2>
             <p>Opportunites for all to excel</p>
         </div>
@@ -45,6 +45,7 @@ AppAsset::register($this);
                     <?= Html::a('Международное сотрудничество', ['menu/international-cooperation']);?>
                     <?= Html::a('Организация питания', ['menu/feed']);?>
                     <?= Html::a('Внедряем ФГОС', ['menu/fgos']);?>
+                    <?= Html::a('Государственная итоговая аттестация (ГИА) - 2023', ['menu/gia']);?>
                 </div>
             </li>
         </ul>

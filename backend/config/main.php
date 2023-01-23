@@ -90,4 +90,17 @@ return [
 
     ],
     'params' => $params,
+
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\PathController',
+            'access' => ['@'],
+            'disabledCommands' => ['netmount'],
+            'root' => [
+                'baseUrl'=>'/files',
+                'basePath'=>'@frontend/web/files',
+                'name' => 'Files',
+            ]
+        ]
+    ],
 ];
