@@ -94,6 +94,13 @@ class MenuController extends \yii\web\Controller
         return $this->render('internationalCooperation', compact('model'));
     }
 
+
+    public function actionAchievements()
+    {
+        $model = \common\models\Menu::find()->where(['page'=> 'achievements'])->one();
+        return $this->render('achievements', compact('model'));
+    }
+
     public function actionFeed()
     {
         $model = new \common\models\Feedback();

@@ -4,6 +4,7 @@ use mihaildev\ckeditor\CKEditor;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use mihaildev\elfinder\ElFinder;
+use backend\assets\BackendAsset;
 
 
 mihaildev\elfinder\Assets::noConflict($this);
@@ -11,6 +12,8 @@ mihaildev\elfinder\Assets::noConflict($this);
 /** @var backend\modules\menuEducation\models\MenuEducationSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
+
+$frontend = BackendAsset::register($this);
 $this->title = 'Редактор страниц'?>
 
 <?php

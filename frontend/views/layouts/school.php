@@ -46,6 +46,7 @@ AppAsset::register($this);
                     <?= Html::a('Организация питания', ['menu/feed']);?>
                     <?= Html::a('Внедряем ФГОС', ['menu/fgos']);?>
                     <?= Html::a('Государственная итоговая аттестация (ГИА) - 2023', ['menu/gia']);?>
+                    <?= Html::a('Наши достижения', ['menu/achievements']);?>
                 </div>
             </li>
         </ul>
