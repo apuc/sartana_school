@@ -55,6 +55,7 @@
                             ['label' => 'Внедряем ФГОС', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'fgos')],
                             ['label' => 'Государственная итоговая аттестация (ГИА) - 2023', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'gia')],
                             ['label' => 'Наши достижения', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'achievements')],
+                            ['label' => 'Школа Минпросвещения России: шаги в будущее', 'icon' => 'archive', 'url' => array('/menu/menu', 'page'=> 'project')],
                         ],
                     ]
                 ]]);

@@ -32,6 +32,12 @@ class MenuController extends \yii\web\Controller
         return $this->render('education', compact('model'));
     }
 
+    public function actionProject()
+    {
+        $model = \common\models\Menu::find()->where(['page'=> 'project'])->one();
+        return $this->render('project', compact('model'));
+    }
+
     public function actionStaff()
     {
         $staff = \common\models\Teachers::find()->all();
