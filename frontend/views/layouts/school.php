@@ -21,16 +21,16 @@ AppAsset::register($this);
     <a class="header__logo" href="/">
         <img src="/media/images/school-logo.jpg" alt="logo"/>
         <div style="margin-left: 100px;" class="header__logoText">
-            <h2>Sartana School</h2>
-            <p>Opportunites for all to excel</p>
+
         </div>
     </a>
+
     <nav class="header__navigation">
         <span class="header__burger"></span>
         <ul class="header__navigationMain">
             <li class="header__navigationMain__item"><a href="/" class="navItem">Главная</a></li>
             <li class="header__navigationMain__item informationItem"><a class="navItem more">Сведения</a>
-                <div class="header__navigationMain__dropdown">
+                <div class="header__navigationMain__dropdown" style="overflow-y: scroll; max-height:400px;">
                     <?= Html::a('Основные сведения', ['menu/base-info']);?>
                     <?= Html::a('Структура и органы управления', ['menu/structures']);?>
                     <?= Html::a('Образование', ['menu/education']);?>

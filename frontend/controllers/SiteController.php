@@ -7,6 +7,7 @@ use frontend\models\VerifyEmailForm;
 use frontend\modules\news\models\News;
 use Yii;
 use yii\base\InvalidArgumentException;
+use yii\db\Expression;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -155,7 +156,7 @@ class SiteController extends Controller
      */
     public function actionNews($id)
     {
-        $news = \common\models\News::find()->limit(2)->all();
+        $news = \common\models\News::find()->limit(2)->orderBy(new Expression('rand()'))->all();
         return $this->render('news-details', [
             'item' => $this->findNewsModel($id),
             'news' => $news,

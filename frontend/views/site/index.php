@@ -35,7 +35,7 @@ $this->title = Yii::$app->name;
                     <?=$item['short_desc']?>
                 </span>
             </div>
-            <?php echo Html::a('read more about' . $item['name'], array('site/news', 'id'=>$item['id']));?>
+            <?php echo Html::a('' . $item['name'], array('site/news', 'id'=>$item['id']));?>
             <?php
             if($item['preview']){
                 ?>

@@ -1,6 +1,6 @@
 <main class="newsDetails">
     <div class="newsDetails__introImg">
-        <img src="/media/images/news-detailsIntro.png" alt="introImg" />
+        <img src="/media/images/news-detailsIntro.jpg" alt="introImg" />
     </div>
     <div class="container">
         <section class="newsDetails__article article">
@@ -22,26 +22,28 @@
                 <div class="relatedArticles__item item">
                     <div class="item__imgContainer">
                         <?php
-                        if($item['preview']){
+                        if($content['preview']){
                             ?>
-                            <img class="item__img" src="/uploads/images/<?=$item['preview']?>" alt="img"/>
+                            <img class="item__img" src="/uploads/images/<?=$content['preview']?>" alt="img"/>
                             <?php
                         }else{
                             ?>
-                            <img class="item__img" src="/uploads/images/<?=$item['image']?>" alt="img"/>
+                            <img class="item__img" src="/uploads/images/<?=$content['image']?>" alt="img"/>
                             <?php
                         }
                         ?>
                     </div>
                     <div class="item__date">
                         <span><?=$content['prettyDate']?></span>
-                        <span>UPDATES</span>
+                        <span>Добавлено</span>
                     </div>
                     <h4 class="item__title"><?=$content['name']?></h4>
                     <p class="item__description">
                         <?=$content['short_desc']?>
                     </p>
-                    <a class="item__more">
+
+
+                    <a class="item__more" href="news?id=<?=$content['id']?>">
                         Continue reading<img src="/media/images/arrowRight.svg" alt="arrow" />
                     </a>
                 </div>

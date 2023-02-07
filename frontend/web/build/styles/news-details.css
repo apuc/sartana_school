@@ -3,7 +3,7 @@ main {
 }
 
 .newsDetails__introImg {
-  max-height: 80vh;
+  max-height: 110vh;
   overflow: hidden;
 }
 .newsDetails__introImg img {
