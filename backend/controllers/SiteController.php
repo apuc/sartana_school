@@ -63,7 +63,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->redirect('/secure');
+        return $this->redirect('/secure/secure');
     }
 
     /**
@@ -81,7 +81,7 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect('/secure');
+            return $this->redirect('/secure/secure');
         }
 
         $model->password = '';

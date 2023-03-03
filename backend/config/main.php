@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-backend',
+    'homeUrl' => '/secure',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
@@ -49,9 +50,14 @@ return [
             'class' => 'backend\modules\docs\Module',
             'layout' => '@backend/modules/admin/views/layouts/main'
         ],
+        'educational-work' => [
+            'class' => 'backend\modules\educationalWork\Module',
+            'layout' => '@backend/modules/admin/views/layouts/main'
+        ],
     ],
     'components' => [
         'request' => [
+            'baseUrl' => '/secure',
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
