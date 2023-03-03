@@ -20,6 +20,7 @@ AppAsset::register($this);
 <header class="header" >
     <a class="header__logo" href="/">
         <img src="/media/images/school-logo.jpg" alt="logo"/>
+        <img src="/media/images/teachers_day.jpg" alt="logo"/>
         <div style="margin-left: 100px;" class="header__logoText">
 
         </div>
