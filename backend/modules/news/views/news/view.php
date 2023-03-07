@@ -52,4 +52,8 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+    <video width="320" height="240" controls>
+        <source src="<?= $model->video ?>">
+    </video>
+
 </div>

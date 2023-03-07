@@ -13,6 +13,7 @@ use yii\db\ActiveRecord;
  * @property string|null $name
  * @property string|null $text
  * @property string|null $image
+ * @property string|null $video
  * @property string|null $short_desc
  * @property string|null $preview
  */
@@ -48,7 +49,7 @@ class News extends \yii\db\ActiveRecord
     {
         return [
             [['date', 'preview','text', 'image','short_desc','name'], 'required'],
-            [['text' ,'image'], 'string'],
+            [['text' ,'image', 'video'], 'string'],
             [['name', 'short_desc'], 'string', 'max' => 255],
         ];
     }
@@ -66,6 +67,7 @@ class News extends \yii\db\ActiveRecord
             'image' => 'Основная картинка',
             'preview' => 'Превью',
             'short_desc' => 'Краткое описание',
+            'video' => 'Видео'
         ];
     }
     public function afterFind()

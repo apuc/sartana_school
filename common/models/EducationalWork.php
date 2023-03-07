@@ -16,8 +16,6 @@ use Yii;
  */
 class EducationalWork extends \yii\db\ActiveRecord
 {
-    public $imageFile;
-    public $videoFile;
     /**
      * {@inheritdoc}
      */
@@ -34,8 +32,6 @@ class EducationalWork extends \yii\db\ActiveRecord
         return [
             [['text', 'title'], 'required'],
             [['link', 'image', 'video', 'title'], 'string', 'max' => 255],
-            [['videoFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'MOV, avi, mp4, mov, MP4, AVI'],
-            [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg'],
 
         ];
     }
@@ -57,9 +53,6 @@ class EducationalWork extends \yii\db\ActiveRecord
 
     public function upload()
     {
-//        $this->validate();
-//
-//        print_r($this->errors);die();
         if ($this->validate()) {
             if ($this->videoFile) {
                 $this->videoFile->saveAs("@frontend/web/uploads/videos/" . $this->videoFile->baseName . "." . $this->videoFile->extension);

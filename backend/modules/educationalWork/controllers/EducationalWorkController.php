@@ -72,12 +72,8 @@ class EducationalWorkController extends Controller
         $model = new EducationalWork();
 
         if ($this->request->isPost) {
-            if ($model->load($this->request->post())) {
-                $model->imageFile = UploadedFile::getInstance($model, 'image');
-                $model->videoFile = UploadedFile::getInstance($model, 'video');
-                $model->upload();
-                if ($model->save(false))
-                    return $this->redirect(['view', 'id' => $model->id]);
+            if ($model->load($this->request->post()) && $model->save(false)) {
+                return $this->redirect(['view', 'id' => $model->id]);
             }
         } else {
             $model->loadDefaultValues();
@@ -100,22 +96,10 @@ class EducationalWorkController extends Controller
         $model = $this->findModel($id);
 
         if ($this->request->isPost) {
-            if ($model->image)
-                unlink(Yii::getAlias('@frontend') . '/web' . $model->image);
-            if ($model->video)
-                unlink(Yii::getAlias('@frontend') . '/web' . $model->video);
-            if ($model->load($this->request->post())) {
-                $model->imageFile = UploadedFile::getInstance($model, 'image');
-                $model->videoFile = UploadedFile::getInstance($model, 'video');
-                $model->upload();
-//                $model->validate();
-//                print_r($model->errors);die();
-
-                if ($model->save(false))
-                    return $this->redirect(['view', 'id' => $model->id]);
+            if ($model->load($this->request->post()) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
             }
         }
-
         return $this->render('update', [
             'model' => $model,
         ]);
@@ -131,10 +115,6 @@ class EducationalWorkController extends Controller
     public function actionDelete($id)
     {
         $model = $this->findModel($id);
-        if ($model->image)
-            unlink(Yii::getAlias('@frontend') . '/web' . $model->image);
-        if ($model->video)
-            unlink(Yii::getAlias('@frontend') . '/web' . $model->video);
         $model->delete();
 
         return $this->redirect(['index']);

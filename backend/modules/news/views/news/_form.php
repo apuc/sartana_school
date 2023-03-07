@@ -1,6 +1,7 @@
 <?php
 
 use kartik\file\FileInput;
+use mihaildev\elfinder\InputFile;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use backend\assets\BackendAsset;
@@ -56,6 +57,22 @@ use backend\assets\BackendAsset;
         ],
 
     ]); ?>
+    <?=InputFile::widget([
+        'language' => 'ru',
+        'controller' => 'elfinder',
+        // вставляем название контроллера, по умолчанию равен elfinder
+//        'filter' => 'video',
+        // фильтр файлов, можно задать массив фильтров https://github.com/Studio-42/elFinder/wiki/Client-con..
+        'name' => 'News[video]',
+        'id' => 'News-video',
+        'template' => '<div class="input-group">{input}<span class="span-btn">{button}</span></div>',
+        'options' => ['class' => 'form-control itemImg', 'maxlength' => '255'],
+        'buttonOptions' => ['class' => 'btn btn-primary'],
+        'value' => $model->video,
+        'buttonName' => 'Выбрать видео',
+    ]);
+    ?>
+
 
     <?= $form->field($model, 'short_desc')->textInput(['maxlength' => true]) ?>
 

@@ -33,6 +33,7 @@
                     ['label' => 'Документы', 'icon' => 'archive', 'url' => ['/docs/docs']],
                     ['label' => 'Педагогический состав', 'icon' => 'archive', 'url' => ['/teachers/teachers'],],
                     ['label' => 'Руководство', 'icon' => 'archive', 'url' => ['/supervisors/supervisors'],],
+                    ['label' => 'Воспитательная работа', 'icon' => 'archive', 'url' => ['/educational-work/educational-work'],],
                     ['label' => 'Питание', 'icon' => 'archive',
                         'items' => [
                             ['label' => 'Меню', 'iconType' => 'archive', 'icon' => 'archive', 'url' => ['/hot-menu/hot-menu'],],
