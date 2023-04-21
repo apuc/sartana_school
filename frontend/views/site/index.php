@@ -7,7 +7,7 @@ use yii\helpers\Html;
 $this->title = Yii::$app->name;
 ?>
 
-<main>
+<main style="margin-top: 70px">
     <div class="container">
 
         <section class="intro">
@@ -20,7 +20,7 @@ $this->title = Yii::$app->name;
             <!--                we take our responsibility as a fun, supportive home-from-home very seriously.</p>-->
             <!--            <a class="intro__about">Download the Prep School Prospectus</a>-->
             <!--            <a class="intro__about">Register for our next Open Morning</a>-->
-            <h1 class="intro__title">Муниципальное бюджетное общеобразовательное учреждение "Сартанская школа имени В.С.Бойко" администрации Новоазовского района.</h1>
+            <h1 class="intro__title">МБОУ "Сартанская средняя школа имени В.С. Бойко" администрации города Мариуполя.</h1>
         </section>
 
         <?php
